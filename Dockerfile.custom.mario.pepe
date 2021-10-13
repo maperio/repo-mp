@@ -1,0 +1,5 @@
+FROM quay.io/mario-pepe/repository-images:latest
+LABEL description="Creating a custom httpd image"
+MAINTAINER Mario Pepe <mpepe@extraordy.com>
+COPY index.html /var/www/html/
+USER root 

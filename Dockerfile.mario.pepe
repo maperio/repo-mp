@@ -1,0 +1,11 @@
+FROM ubi8/ubi
+LABEL description="Creating a Custom httpd image"
+MAINTAINER Mario Pepe <mpepe@extraordy.com>
+RUN yum install -y httpd
+ENV test var " This is a test enviroment variable "
+EXPOSE 80
+USER root
+ENTRYPOINT ["/usr/sbin/httpd"]
+CMD ["-D","FOREGROUND"]
+
+
